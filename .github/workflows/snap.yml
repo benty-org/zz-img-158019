@@ -1,0 +1,12 @@
+name: snap
+on:
+  workflow_dispatch:
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    snapshot:
+      image-name: zz-hc1-158019
+      version: "1.*"
+    steps:
+      - name: marker
+        run: echo "RAN repo=${{ github.repository }}"
